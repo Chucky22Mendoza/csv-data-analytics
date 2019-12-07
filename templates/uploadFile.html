@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+    <div class="">
+            <div>
+                {% for table in tables %}
+                    {{table|safe}}
+                {% endfor %}
+            </div>
+            <div class="form-group row col-md-12 mt-4">
+                <div class="col-md-5"></div>
+                <form action="/message" method="POST" class="col-md-4">
+                    <input type="hidden" name="fileUpload" value="{{save_data}}">
+                    <select name="firstColumn" id="firstColumn" class="form-control mt-2">
+                        <option value="0" selected>Select Column</option>
+                        {% for title in titles %}
+                        <option value="{{title}}">{{title}}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="graph" class="form-control mt-2">
+                        <option value="0" selected>Select Graph</option>
+                        <option value="barra">Barras</option>
+                        <option value="pastel">Pastel</option>
+                        <option value="lineal">Lineal</option>
+                    </select>
+
+                    <input type="text" name="nameGraph" class="form-control mt-2" placeholder="Nombre de la gráfica" required>
+                    <button type="submit" class="btn btn-primary form-control mt-2">Guardar gráfica</button>
+                </form>
+            </div>
+    </div>
+{% endblock %}
