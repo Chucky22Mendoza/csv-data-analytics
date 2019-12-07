@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect, flash
-from methods import *
+from methods import read_csv, graph_dataframe
 
 file = ""
 
