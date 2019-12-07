@@ -20,7 +20,7 @@ def upload_file():
     response = read_csv(file)
     df = response.head()
 
-    return render_template("uploadFile.html", tables=[df.to_html(classes='data', header="true")], titles=df.columns.values, save_data = file)
+    return render_template("uploadFile.html", tables=[df.to_html(classes='data', header="true")], titles=df.columns.values)
 
 @app.route('/message', methods=['POST'])
 def message():

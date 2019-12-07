@@ -10,7 +10,6 @@
             <div class="form-group row col-md-12 mt-4">
                 <div class="col-md-5"></div>
                 <form action="/message" method="POST" class="col-md-4">
-                    <input type="hidden" name="fileUpload" value="{{save_data}}">
                     <select name="firstColumn" id="firstColumn" class="form-control mt-2">
                         <option value="0" selected>Select Column</option>
                         {% for title in titles %}
