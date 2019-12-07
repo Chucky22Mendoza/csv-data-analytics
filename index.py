@@ -18,6 +18,7 @@ def upload_file():
     file = request.files['fileUpload']
     global response
     response = read_csv(file)
+    print(response)
     df = response.head()
 
     return render_template("uploadFile.html", tables=[df.to_html(classes='data', header="true")], titles=df.columns.values, save_data = file)
@@ -30,7 +31,7 @@ def message():
     nameGraph = request.form['nameGraph']
 
     if(graph != '0' and column != '0'):
-        print(response)
+        #print(response)
         #graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
