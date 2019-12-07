@@ -7,6 +7,7 @@ def read_csv(routeFile):
     return df
 
 def graph_dataframe(response, columnName, option, nameGraph):
+    print(response)
     df = response
     df = df.dropna()
 

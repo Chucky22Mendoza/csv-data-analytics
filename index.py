@@ -30,6 +30,7 @@ def message():
     nameGraph = request.form['nameGraph']
 
     if(graph != '0' and column != '0'):
+        print(response)
         graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
