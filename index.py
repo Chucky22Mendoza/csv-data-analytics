@@ -31,7 +31,7 @@ def message():
 
     if(graph != '0' and column != '0'):
         print(response)
-        graph_dataframe(response, column, graph, nameGraph)
+        #graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
         return redirect(url_for('index'))
