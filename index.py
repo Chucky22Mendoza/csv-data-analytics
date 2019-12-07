@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect, flash
+from flask_caching import Cache
 from methods import read_csv, graph_dataframe
 
 file = ""
@@ -30,14 +31,13 @@ def message():
     nameGraph = request.form['nameGraph']
 
     if(graph != '0' and column != '0'):
-        graph_dataframe(response, column, graph, nameGraph)
+        img_transform = graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
-        return redirect(url_for('index'))
+        return render_template("show_img.html", url_img = img_transform)
     else:
         flash("Error trying save the graph")
-
-        return redirect(url_for('index'))
+        return render_template("show_img.html")
 
 @app.errorhandler(404)
 def page_not_found(error):

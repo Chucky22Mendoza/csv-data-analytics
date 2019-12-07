@@ -17,7 +17,8 @@ def graph_dataframe(response, columnName, option, nameGraph):
         plt.pie(df[columnName])
     else:
         plt.plot(df[columnName])
-    plt.savefig("UploadedFiles/{}.png".format(nameGraph))
+    plt.savefig("static/img/{}.png".format(nameGraph))
+    return str("{}.png".format(nameGraph))
 
 def show_csv(file):
     df = read_csv(file)

@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+    <div class="form-group row col-md-12 d-flex justify-content-center">
+        <div class="col-md-6">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            {% if url_img %}
+            <img src="static/img/{{url_img}}" class="col-md-12">
+            {% endif %}
+            <a href="/" class="btn btn-primary mt-4 form-control">Go to Home</a>
+        </div>
+    </div>
+{% endblock %}

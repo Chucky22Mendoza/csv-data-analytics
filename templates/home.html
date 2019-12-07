@@ -3,18 +3,6 @@
 {% block body %}
     <div class="form-group row col-md-12 d-flex justify-content-center">
         <form action="/uploadFile", method="POST" enctype="multipart/form-data" class="col-md-6">
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <strong>{{ message }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            {% endfor %}
-            {% endif %}
-            {% endwith %}
             <h5 class="text-light mt-5">Select CSV file to upload:</h5>
             <input type="file" name="fileUpload" class="form-control mt-2" accept=".csv" id="fileUpload" required>
             <button type="submit" class="btn btn-primary mt-4 form-control">Upload</button>
