@@ -29,9 +29,10 @@ def message():
     column = request.form['firstColumn']
     graph = request.form['graph']
     nameGraph = request.form['nameGraph']
+    info = response
 
     if(graph != '0' and column != '0'):
-        print(response)
+        print(info)
         ##img_transform = graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
