@@ -33,11 +33,11 @@ def message():
 
     if(graph != '0' and column != '0'):
         print(info)
-        ##img_transform = graph_dataframe(response, column, graph, nameGraph)
+        img_transform = graph_dataframe(info, column, graph, nameGraph)
+        print(img_transform)
         flash("Graph Saved Successfully")
-        return "hola mundo"
 
-        ##return render_template("show_img.html", url_img = img_transform)
+        return render_template("show_img.html", url_img = img_transform)
     else:
         flash("Error trying save the graph")
         return render_template("show_img.html")
