@@ -31,7 +31,8 @@ def message():
     nameGraph = request.form['nameGraph']
 
     if(graph != '0' and column != '0'):
-        img_transform = graph_dataframe(response, column, graph, nameGraph)
+        print(response)
+        ##img_transform = graph_dataframe(response, column, graph, nameGraph)
         flash("Graph Saved Successfully")
 
         return render_template("show_img.html", url_img = img_transform)
