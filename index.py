@@ -70,7 +70,7 @@ def message():
         #print(path)
         temp_df = response.iloc[0:10] #seleccionar solo los primeros 10 registros
         temp_df = temp_df.fillna(0)
-        print(temp_df)
+        #print(temp_df)
 
         #Graficación por punto
         if(graph == 'punto'):
