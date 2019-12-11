@@ -70,6 +70,7 @@ def message():
         #print(path)
         temp_df = response.iloc[0:10] #seleccionar solo los primeros 10 registros
         temp_df = temp_df.fillna(0)
+        print(temp_df)
 
         #Graficación por punto
         if(graph == 'punto'):
@@ -115,7 +116,7 @@ def message():
             #plt.savefig(path)
             #plt.savefig(img, format='png')  #guardar la figura
             #plt_temp = plt
-            plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
+            #plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
             plot_url = base64.b64encode(img.getvalue()).decode()  #imagen guardada en url base64 en memoria caché
 
