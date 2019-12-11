@@ -114,7 +114,7 @@ def message():
             plt.title("Graph: "+graph+"   Column: "+column) #nombrar la gráfica
             plt.hist(temp_df[column])  #tipo de gráfica
             #plt.savefig(path)
-            #plt.savefig(img, format='png')  #guardar la figura
+            plt.savefig(img, format='png')  #guardar la figura
             #plt_temp = plt
             #plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
