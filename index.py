@@ -78,8 +78,8 @@ def message():
             plt.plot(temp_df[column], '--')  #tipo de gráfica
             #plt.savefig(path)
             plt.savefig(img, format='png')  #guardar la figura
-            plt_temp = plt
-            plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
+            #plt_temp = plt
+            #plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
             plot_url = base64.b64encode(img.getvalue()).decode()  #imagen guardada en url base64 en memoria caché
 
@@ -90,8 +90,8 @@ def message():
             plt.plot(temp_df[column])  #tipo de gráfica
             #plt.savefig(path)
             plt.savefig(img, format='png')  #guardar la figura
-            plt_temp = plt
-            plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
+            #plt_temp = plt
+            #plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
             plot_url = base64.b64encode(img.getvalue()).decode()  #imagen guardada en url base64 en memoria caché
 
@@ -102,8 +102,8 @@ def message():
             plt.pie(temp_df[column], labels=temp_df[column], autopct="%0.1f %%")  #tipo de gráfica
             #plt.savefig(path)
             plt.savefig(img, format='png')  #guardar la figura
-            plt_temp = plt
-            plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
+            #plt_temp = plt
+            #plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
             plot_url = base64.b64encode(img.getvalue()).decode()  #imagen guardada en url base64 en memoria caché
 
@@ -113,8 +113,8 @@ def message():
             plt.title("Graph: "+graph+"   Column: "+column) #nombrar la gráfica
             plt.hist(temp_df[column])  #tipo de gráfica
             #plt.savefig(path)
-            plt.savefig(img, format='png')  #guardar la figura
-            plt_temp = plt
+            #plt.savefig(img, format='png')  #guardar la figura
+            #plt_temp = plt
             plt_temp.savefig("static/img/{}.png".format(nameGraph)) #guardar en servidor
             img.seek(0) #solicitar
             plot_url = base64.b64encode(img.getvalue()).decode()  #imagen guardada en url base64 en memoria caché
