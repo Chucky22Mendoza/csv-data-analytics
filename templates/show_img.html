@@ -17,7 +17,7 @@
             {% endwith %}
 
             {% if url_img %}
-            <img src=" {{url_for('static', filename='img/')}}{{url_img}}" class="col-md-12">
+            <img src="data:image/png;base64,{{url_img}}" class="col-md-12">
             {% endif %}
             <a href="/" class="btn btn-primary mt-4 form-control">Go to Home</a>
         </div>
