@@ -55,7 +55,7 @@ def message():
     ###Valores del formulario
     column = request.form['firstColumn']
     graph = request.form['graph']
-    nameGraph = request.form['nameGraph']
+    #nameGraph = request.form['nameGraph']
 
     #data_server = escape(data)
     #df = pd.read_csv(data_server)
